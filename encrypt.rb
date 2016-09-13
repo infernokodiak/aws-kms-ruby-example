@@ -24,8 +24,8 @@ puts 'plaintext key:'
 puts Base64.strict_encode64(response.plaintext)
 puts
 
-# encrypt the data using the plaintext key .
-# and Ruby's OpenSSL Cipher class and AES256 CBC. the data is encrypted using the plaintext key and a random iv
+# encrypt the data using the plaintext key and Ruby's OpenSSL Cipher class and AES256 CBC.
+# the data is encrypted using the plaintext key and a random iv
 ptk = response.plaintext
 cipher = OpenSSL::Cipher::AES256.new(:CBC)
 cipher.encrypt
